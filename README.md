@@ -45,15 +45,6 @@ After successful deployment, you can invoke the deployed function by using the f
 serverless invoke --function hello
 ```
 
-Which should result in response similar to the following:
-
-```json
-{
-    "statusCode": 200,
-    "body": "{\n  \"message\": \"Go Serverless v3.0! Your function executed successfully!\",\n  \"input\": {}\n}"
-}
-```
-
 ### Local development
 
 You can invoke your function locally by using the following command:
@@ -62,11 +53,18 @@ You can invoke your function locally by using the following command:
 serverless invoke local --function hello
 ```
 
-Which should result in response similar to the following:
+### Deploy
 
+To deploy all functions:
+
+```bash
+serverless deploy
 ```
-{
-    "statusCode": 200,
-    "body": "{\n  \"message\": \"Go Serverless v3.0! Your function executed successfully!\",\n  \"input\": \"\"\n}"
-}
+
+
+To update a function:
+
+```bash
+serverless deploy --function hello
 ```
+
