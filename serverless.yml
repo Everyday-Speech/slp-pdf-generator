@@ -1,0 +1,46 @@
+service: pdf-generator
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  apiGateway:
+    binaryMediaTypes:
+      - "application/pdf"
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - "s3:GetObject"
+        - "s3:PutObject"
+      Resource:
+        - arn:aws:s3:::ws-pdf-generator/*
+  s3:
+    demoBucket:
+      name: ws-pdf-generator
+      bucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      versioningConfiguration:
+        Status: Suspended
+
+functions:
+  diceroller-pdf:
+    handler: functions/handler.diceroller
+    timeout: 10
+    events:
+      - httpApi:
+          path: /api/pdf/diceroller
+          method: GET  
+  flashcard-pdf:
+    handler: functions/handler.flashcard
+    timeout: 20
+    events:
+      - s3:
+          bucket: demoBucket
+          event: s3:ObjectCreated:*
+          rules:
+            - prefix: uploads/
+            - suffix: .pdf 

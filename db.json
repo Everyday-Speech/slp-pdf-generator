@@ -1,0 +1,751 @@
+{
+    "activity": [{
+            "id": "1",
+            "type": "fill_in_the_blanks",
+            "worksheet": {
+                "title": "Communicating with Friends",
+                "description": "When we talk to a friend we need to say what we are thinking so they understand us. We also listen to what they are saying so we hear their ideas.",
+                "questions": [{
+                        "preWord": "Your friend wants to play video games after school with you. You want to play baseball. You can say,",
+                        "word": "Thanks for asking me, but I'm playing ball today. Do you want to join?",
+                        "postWord": "."
+                    },
+                    {
+                        "preWord": "You were invited to a laser tag party, but you really don't like to do that. You can say,",
+                        "word": "It's not something I enjoy, but thanks for inviting me.",
+                        "postWord": "."
+                    },
+                    {
+                        "preWord": "You want to invite friends over to watch movies. You can say,",
+                        "word": "I'm having a movie party, can you come over Friday night?",
+                        "postWord": "."
+                    },
+                    {
+                        "preWord": "You want to sit next to your friend on the bus tomorrow. You can say,",
+                        "word": "Can we sit together tomorrow?",
+                        "postWord": "."
+                    },
+                    {
+                        "preWord": "A bunch of kids are playing kickball at recess. You can say,",
+                        "word": "Can I join in the game tomorrow?",
+                        "postWord": "."
+                    },
+                    {
+                        "preWord": "Your classmate didn't want you to join their project group. You can say,",
+                        "word": "I am a good worker, that hurt my feelings.",
+                        "postWord": "."
+                    },
+                    {
+                        "preWord": "Your friend looks very sad and is quiet. You can say, ",
+                        "word": "You seem upset, how can I help you?",
+                        "postWord": "."
+                    },
+                    {
+                        "preWord": "The assembly today is about being a scientist. You and your friends are not excited. You can say,",
+                        "word": "It's okay, I'm sure we will learn something.",
+                        "postWord": "."
+                    },
+                    {
+                        "preWord": "Your friend thought you were mad at her. You can say,",
+                        "word": "I'm sorry you felt like that. I am not upset with you.",
+                        "postWord": "."
+                    },
+                    {
+                        "preWord": "You invited a friend over for supper. They asked what you were having to eat and then said no thanks. You can say,",
+                        "word": "Okay, maybe we can plan for another night soon.",
+                        "postWord": "."
+                    }
+                ],
+                "autoCheck": true
+            }
+        },
+        {
+            "id": "2",
+            "type": "q_and_a",
+            "worksheet": {
+                "title": "Staying Safe Online",
+                "description": "Our Cyber Skills are smart ways to use technology to communicate with others and stay safe. We use our Cyber Skills anytime we are online, like when we use social media.",
+                "instruction": "For each behavior below, use your Cyber Skills to write in why they are examples of UNSAFE online behaviors. These are behaviors we should avoid doing when we are online. ",
+                "review": "Cyber safety requires being honest with your parents. Can you give an example of a suspicious online situation that you should tell your parents about?",
+                "questions": [
+                    "\"Friend\" or accept friend requests from people you don't know. Why is this UNSAFE?",
+                    "Keep your social media account(s) on 'public'. Why is this UNSAFE?",
+                    "Make plans to meet someone who you have only talked to online. Why is this UNSAFE?",
+                    "Tag your location on your social media posts. Why is this UNSAFE?"
+                ]
+            }
+        },
+        {
+            "id": "3",
+            "type": "sorting",
+            "worksheet": {
+                "title": "The Dos and Don'ts of Interviewing",
+                "description": "Before our big interview arrives, there\u2019s a few things we can do beforehand to prepare. By preparing for an interview ahead of time, we give ourselves the best chance of success.",
+                "categories": [{
+                        "name": "Dos",
+                        "items": [
+                            "Respond to emails professionally",
+                            "Set an interview date and time ASAP",
+                            "Research the business or company",
+                            "Prepare questions to ask",
+                            "Pick a professional outfit",
+                            "Use personal hygiene "
+                        ]
+                    },
+                    {
+                        "name": "Don'ts",
+                        "items": [
+                            "Ask about money right away",
+                            "Forget to respond to emails\r\n",
+                            "Change interview times last minute",
+                            "Wear clothes that don't fit the job",
+                            "Send emails with typos",
+                            "Do nothing to prepare "
+                        ]
+                    }
+                ],
+                "autoCheck": true
+            }
+        },
+        {
+            "id": "4",
+            "type": "spinner",
+            "worksheet": {
+                "title": "Honoring My Strengths",
+                "description": "Part of being proud of ourselves means celebrating our uniqueness, including our strengths and weaknesses. When we embrace and honor our differences, we boost our self-esteem. ",
+                "spinnerTitle": "Answer each prompt or question.",
+                "spinnerItems": [
+                    "Name 3 strengths of yours.",
+                    "What is one thing that is challenging for you, that you\u2019d like to practice getting better at?",
+                    "Give yourself or a group member a compliment."
+                ],
+                "review": "Reflect on how it feels to notice and embrace your own unique strengths and weaknesses. How can you incorporate this practice of honoring your strengths into your day-to-day?"
+            }
+        },
+        {
+            "id": "5",
+            "type": "matching",
+            "worksheet": {
+                "title": "Dealing with Frustrated Feelings",
+                "description": "Before our big interview arrives, there\u2019s a few things we can do beforehand to prepare. By preparing for an interview ahead of time, we give ourselves the best chance of success.",
+                "pairs": [{
+                        "name": "Problem",
+                        "items": [
+                            "You are in PE and someone throws a ball at you",
+                            "Your work is too hard",
+                            "You lose your spot in line",
+                            "Your friend wants to play with someone else",
+                            "You answer a question incorrectly in front of the class"
+                        ]
+                    },
+                    {
+                        "name": "Solution",
+                        "items": [
+                            "Take three deep breaths",
+                            "Walk away",
+                            "Count to 10 Slowly",
+                            "Get a drink of water",
+                            "Ask a teacher for help"
+                        ]
+                    }
+                ],
+                "autoCheck": true
+            }
+        },
+        {
+            "id": "6",
+            "type": "fill_in_the_blanks",
+            "worksheet": {
+                "title": "Listening in Class",
+                "description": "When our teacher is talking, we should always listen. If we don't listen, we could miss important directions or information. Fill in the blank with ways to be a good listener.",
+                "questions": [{
+                        "preWord": "When my teacher is talking, I look with my",
+                        "word": "eyes",
+                        "postWord": "."
+                    },
+                    {
+                        "preWord": "I show my teacher I'm listening by having a calm",
+                        "word": "body",
+                        "postWord": "."
+                    },
+                    {
+                        "preWord": "We use our",
+                        "word": "ears",
+                        "postWord": "to listen in class."
+                    },
+                    {
+                        "preWord": "If we have a question in class, we can raise our",
+                        "word": "hand",
+                        "postWord": "."
+                    },
+                    {
+                        "preWord": "It's important to have a quiet",
+                        "word": "mouth",
+                        "postWord": "and not to talk when we're listening in class."
+                    },
+                    {
+                        "preWord": "If our teacher is talking, we need to",
+                        "word": "wait our turn",
+                        "postWord": "to talk or ask a question."
+                    },
+                    {
+                        "preWord": "When we're listening in class, we shouldn't",
+                        "word": "talk",
+                        "postWord": "to our friends or classmates."
+                    },
+                    {
+                        "preWord": "",
+                        "word": "talk",
+                        "postWord": "means paying attention to what is being said."
+                    },
+                    {
+                        "preWord": "When we raise our hand in class, we should",
+                        "word": "listening",
+                        "postWord": "to be called on by the teacher before talking."
+                    },
+                    {
+                        "preWord": "When we listen, we keep our",
+                        "word": "brain",
+                        "postWord": "focused on what is being said."
+                    }
+                ],
+                "autoCheck": false
+            }
+        },
+        {
+            "id": "7",
+            "type": "matching",
+            "worksheet": {
+                "title": "Dealing with Frustrated Feelings",
+                "description": "Before our big interview arrives, there\u2019s a few things we can do beforehand to prepare. By preparing for an interview ahead of time, we give ourselves the best chance of success.",
+                "pairs": [{
+                        "name": "Problem",
+                        "items": [
+                            "You are in PE and someone throws a ball at you",
+                            "Your work is too hard",
+                            "You lose your spot in line",
+                            "Your friend wants to play with someone else",
+                            "You answer a question incorrectly in front of the class"
+                        ]
+                    },
+                    {
+                        "name": "Solution",
+                        "items": [
+                            "Take three deep breaths",
+                            "Walk away",
+                            "Count to 10 Slowly",
+                            "Get a drink of water",
+                            "Ask a teacher for help"
+                        ]
+                    }
+                ],
+                "autoCheck": false
+            }
+        },
+        {
+            "id": "8",
+            "type": "sorting",
+            "worksheet": {
+                "title": "Superflex",
+                "description": "Sort what is superflex behavior and what is not.",
+                "categories": [{
+                        "name": "Superflex",
+                        "items": [
+                            "waiting your turn",
+                            "listening to a friend",
+                            "playing a game your friend likes",
+                            "having an unsafe body when you are mad",
+                            "taking a break",
+                            "yelling at a teacher or friend"
+                        ]
+                    },
+                    {
+                        "name": "Not Superflex",
+                        "items": [
+                            "not following directions",
+                            "trying something new",
+                            "sitting with a new friend",
+                            "not letting a friend play",
+                            "grabbing something your want",
+                            "sharing"
+                        ]
+                    }
+                ],
+                "autoCheck": false
+            }
+        },
+        {
+            "id": "9",
+            "type": "flashcard",
+            "worksheet": {
+                "title": "ACTIVITY TITLE BLANK SPACE (60 CHARACTERS) LETS FILL WITH IT",
+                "description": "When our teacher is talking, we should always listen. If we don’t listen we could miss important instructions or information.  Lets fill it with one hundredeighty characters try it",
+                "cards": [{
+                        "front": {
+                            "title": "Look at the picture, what does the images ",
+                            "text": "At quisque morbi quis magna vitae facilisis massa consectetur sed? Do you prefer to eat pancakes or waffles?",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1565139894/stagingimage/gm23ehykjxgpvpmopjbf.png"
+                        },
+                        "back": {
+                            "title": "Which octopus looked the happiest? Why doo",
+                            "text": "At quisque morbi quis magna vitae facilisis massa consectetur sed? Do you prefer to eat pancakes or waffles?",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564064023/staging_image/ucrmyf3zumpmigbjkb1a.png"
+                        }
+                    },
+                    {
+                        "front": {
+                            "title": "Superflex 2",
+                            "text": "waiting your turn 2",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564014839/staging_image/zudn0mqz5skxyyfhlovf.png"
+                        },
+                        "back": {
+                            "title": "Superflex 2",
+                            "text": "waiting your turn 2"
+                        }
+                    },
+                    {
+                        "front": {
+                            "title": "Superflex 3",
+                            "text": "waiting your turn 3",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564014839/staging_image/zudn0mqz5skxyyfhlovf.png"
+                        },
+                        "back": {
+                            "text": "waiting your turn 3"
+                        }
+                    },
+                    {
+                        "front": {
+                            "title": "Superflex 4",
+                            "text": "waiting your turn 4",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564014839/staging_image/zudn0mqz5skxyyfhlovf.png"
+                        },
+                        "back": {
+                            "title": "Superflex 4",
+                            "text": "waiting your turn 4",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564064023/staging_image/ucrmyf3zumpmigbjkb1a.png"
+                        }
+                    },
+                    {
+                        "front": {
+                            "title": "Superflex 5",
+                            "text": "waiting your turn 5",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564014839/staging_image/zudn0mqz5skxyyfhlovf.png"
+                        },
+                        "back": {
+                            "title": "Superflex 5",
+                            "text": "waiting your turn 5",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564064023/staging_image/ucrmyf3zumpmigbjkb1a.png"
+                        }
+                    },
+                    {
+                        "front": {
+                            "title": "Superflex 6",
+                            "text": "waiting your turn 6",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564014839/staging_image/zudn0mqz5skxyyfhlovf.png"
+                        },
+                        "back": {
+                            "title": "Superflex 6",
+                            "text": "waiting your turn 6",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564064023/staging_image/ucrmyf3zumpmigbjkb1a.png"
+                        }
+                    },
+                    {
+                        "front": {
+                            "title": "Superflex 7",
+                            "text": "waiting your turn 7",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564014839/staging_image/zudn0mqz5skxyyfhlovf.png"
+                        },
+                        "back": {
+                            "title": "Superflex 7",
+                            "text": "waiting your turn 7",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564064023/staging_image/ucrmyf3zumpmigbjkb1a.png"
+                        }
+                    },
+                    {
+                        "front": {
+                            "title": "Superflex 8",
+                            "text": "waiting your turn 8",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564014839/staging_image/zudn0mqz5skxyyfhlovf.png"
+                        },
+                        "back": {
+                            "title": "Superflex 8",
+                            "text": "waiting your turn 8",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564064023/staging_image/ucrmyf3zumpmigbjkb1a.png"
+                        }
+                    },
+                    {
+                        "front": {
+                            "title": "Superflex 9",
+                            "text": "waiting your turn 9",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564014839/staging_image/zudn0mqz5skxyyfhlovf.png"
+                        },
+                        "back": {
+                            "title": "Superflex 9",
+                            "text": "waiting your turn 9",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564064023/staging_image/ucrmyf3zumpmigbjkb1a.png"
+                        }
+                    },
+                    {
+                        "front": {
+                            "title": "Superflex 10",
+                            "text": "waiting your turn 10",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564014839/staging_image/zudn0mqz5skxyyfhlovf.png"
+                        },
+                        "back": {
+                            "title": "Superflex 10",
+                            "text": "waiting your turn 10",
+                            "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1564064023/staging_image/ucrmyf3zumpmigbjkb1a.png"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "10",
+            "type": "dice_roller",
+            "worksheet": {
+                "title": "Tone of voice",
+                "description": "Tone of voice is not what we say, but how we say something. Learning to pick-up on the differences between someone’s tone of voice helps us to know how they’re feeling and what their intended message is.",
+                "instruction": [
+                    "Actors take turns rolling the dice to reveal a line and tone of voice. Make sure no other group members can see the dice.",
+                    "Actors will say their given line using the indicated tone of voice.",
+                    "Group members take turns guessing how the actor is feeling and what their intended message is."
+                ],
+                "cards": [{
+                        "side": 1,
+                        "prompt": "“What’s wrong?” (concerned)",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1624466952/interactive_activities/MTCH%20W289/W289_MTCH_3L_image.png"
+                    },
+                    {
+                        "side": 2,
+                        "prompt": "Lorem ipsum dolor sit amet, consectetur adipi.",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1624466952/interactive_activities/MTCH%20W289/W289_MTCH_3L_image.png"
+                    },
+                    {
+                        "side": 3,
+                        "prompt": "Lorem ipsum dolor sit amet, consectetur adipi."
+                    },
+                    {
+                        "side": 4,
+                        "prompt": "“Can you move over?” (rude)",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1624466952/interactive_activities/MTCH%20W289/W289_MTCH_2L_image.png"
+                    },
+                    {
+                        "side": 5,
+                        "prompt": "“You’re so funny!” (sarcastic)",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1624466951/interactive_activities/MTCH%20W289/W289_MTCH_1L_image.png"
+                    },
+                    {
+                        "side": 6,
+                        "prompt": "“You’re so funny!” (sarcastic)",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1624466951/interactive_activities/MTCH%20W289/W289_MTCH_1L_image.png"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "11",
+            "type": "dice_roller",
+            "worksheet": {
+                "title": "I’m Feeling…",
+                "description": "We can use the ‘Big Three’ clues - the eyes, eyebrows, and mouth to read how others are feeling. Knowing how someone feels helps us know what to say or do in a situation.",
+                "instruction": [
+                    "Actors take turns rolling the dice to reveal an emoji to act out. Make sure no other group members can see the dice.",
+                    "Without words, actors will use their facial expressions to act out out the emoji.",
+                    "Group members take turns guessing the emotion of the actor."
+                ],
+                "cards": [{
+                        "side": 1,
+                        "prompt": "Confused",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1638174294/interactive_activities/MTCH%20W298/W298_MTCH_1L_image.png"
+                    },
+                    {
+                        "side": 2,
+                        "prompt": "Angry",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1642591533/games/world_c3_assets/emojis/face_Angry.png"
+                    },
+                    {
+                        "side": 3,
+                        "prompt": "Disappointed ",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1638174294/interactive_activities/MTCH%20W298/W298_MTCH_3L_image.png"
+                    },
+                    {
+                        "side": 4,
+                        "prompt": "Excited",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1642591536/games/world_c3_assets/emojis/face_Excited.png"
+                    },
+                    {
+                        "side": 5,
+                        "prompt": "Bored",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1642591533/games/world_c3_assets/emojis/face_Bored.png"
+                    },
+                    {
+                        "side": 6,
+                        "prompt": "Scared",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1642591538/games/world_c3_assets/emojis/face_Scared.png"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "12",
+            "type": "dice_roller",
+            "worksheet": {
+                "title": "Tone of Voice",
+                "description": "Tone of voice is not what we say, but how we say something. Learning to pick-up on the differences between someone’s tone of voice helps us to know how they’re feeling and what their intended message is.",
+                "instruction": [
+                    "Actors take turns rolling the dice to reveal a line and tone of voice. Make sure no other group members can see the dice.",
+                    "Actors will say their given line using the indicated tone of voice.",
+                    "Group members take turns guessing how the actor is feeling and what their intended message is."
+                ],
+                "cards": [{
+                        "side": 1,
+                        "prompt": "“What’s wrong?” (concerned)",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1642591534/games/world_c3_assets/emojis/face_Concerned.png"
+                    },
+                    {
+                        "side": 2,
+                        "prompt": "“Can you move over?” (rude)",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1642591533/games/world_c3_assets/emojis/face_Angry.png"
+                    },
+                    {
+                        "side": 3,
+                        "prompt": "“You’re so funny!” (sarcastic)",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1624466952/interactive_activities/MTCH%20W289/W289_MTCH_3L_image.png"
+                    },
+                    {
+                        "side": 4,
+                        "prompt": "“What’s wrong?” (annoyed)",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1642591533/games/world_c3_assets/emojis/face_Annoyed.png"
+                    },
+                    {
+                        "side": 5,
+                        "prompt": "“Can you move over?” (polite)",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1642591536/games/world_c3_assets/emojis/face_Happy.png"
+                    },
+                    {
+                        "side": 6,
+                        "prompt": "“You’re so funny!” (kind)",
+                        "imageURL": "https://res.cloudinary.com/everyday-speech/image/upload/v1642591536/games/world_c3_assets/emojis/face_Happy.png"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "13",
+            "type": "multiple_choice",
+            "worksheet": {
+                "title": "Showing Respect",
+                "description": "Everyone deserves respect. We show respect using our words and actions to treat others in a way that makes them feel valued.",
+                "instruction": "Select the best answer(s) for each question or statement.",
+                "correction": true,
+                "autoCheck": true,
+                "questions": [{
+                        "prompt": "How would you disagree respectfully with someone who has a different opinion than you?",
+                        "options": [{
+                                "text": "Interrupt them while they're talking",
+                                "correct": false
+                            },
+                            {
+                                "text": "Say that your opinion is the best",
+                                "correct": false
+                            },
+                            {
+                                "text": "Be a patient listener ",
+                                "correct": true
+                            },
+                            {
+                                "text": "Look disinterested in the conversation",
+                                "correct": false
+                            },
+                            {
+                                "text": "Share your opinion using a kind tone of voice",
+                                "correct": true
+                            },
+                            {
+                                "text": "Wait for your turn to talk",
+                                "correct": true
+                            }
+                        ]
+                    },
+                    {
+                        "prompt": "Showing respect means...",
+                        "options": [{
+                                "text": "thinking about others and honoring their feelings, thoughts, and opinions.",
+                                "correct": true
+                            },
+                            {
+                                "text": "disagreeing with others when they think or feel differently than you.",
+                                "correct": false
+                            },
+                            {
+                                "text": "thinking that everyone should have the same perspective as you.",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    {
+                        "prompt": "Which of the following is NOT an example of showing respect?",
+                        "options": [{
+                                "text": "Kayla rolls her eyes when Bri says she likes brownies more than cookies.",
+                                "correct": true
+                            },
+                            {
+                                "text": "Zai raises his hand to ask his teacher a question in class.",
+                                "correct": false
+                            },
+                            {
+                                "text": "Dante says, “Excuse me” when walking by someone in the grocery store.",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    {
+                        "prompt": "Self-respect is...",
+                        "options": [{
+                                "text": "thinking you are always right.",
+                                "correct": false
+                            },
+                            {
+                                "text": "having pride and confidence in yourself.",
+                                "correct": true
+                            },
+                            {
+                                "text": "considering the thoughts and opinions of others.",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    {
+                        "prompt": "Select all the self-respecting behaviors below.",
+                        "options": [{
+                                "text": "Forgiving yourself when you make a mistake.",
+                                "correct": true
+                            },
+                            {
+                                "text": "Accepting yourself without the approval of others.",
+                                "correct": true
+                            },
+                            {
+                                "text": "Constantly comparing yourself to others.",
+                                "correct": false
+                            },
+                            {
+                                "text": "Taking care of yourself physically and mentally.",
+                                "correct": true
+                            },
+                            {
+                                "text": "Giving into peer pressure to make others happy.",
+                                "correct": false
+                            },
+                            {
+                                "text": "Honoring your values.",
+                                "correct": true
+                            }
+                        ]
+                    },
+                    {
+                        "prompt": "How does it feel when we are shown respect?",
+                        "options": [{
+                                "text": "Curious",
+                                "correct": false
+                            },
+                            {
+                                "text": "Distracted",
+                                "correct": false
+                            },
+                            {
+                                "text": "Content",
+                                "correct": true
+                            }
+                        ]
+                    },
+                    {
+                        "prompt": "Which of the following are ways to show respect to others?",
+                        "options": [{
+                                "text": "Practice active listening.",
+                                "correct": true
+                            },
+                            {
+                                "text": "State your opinions as facts.",
+                                "correct": false
+                            },
+                            {
+                                "text": "Show empathy.",
+                                "correct": true
+                            },
+                            {
+                                "text": "Seek to understand others.",
+                                "correct": true
+                            },
+                            {
+                                "text": "Point out others' differences.",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    {
+                        "prompt": "What are the ways we can show respect using nonverbal communication (i.e., not using words)?",
+                        "options": [{
+                                "text": "Nodding along in a conversation.",
+                                "correct": true
+                            },
+                            {
+                                "text": "Looking bored and uninterested when someone is talking.",
+                                "correct": false
+                            },
+                            {
+                                "text": "Laughing when someone is talking about something serious.",
+                                "correct": false
+                            },
+                            {
+                                "text": "Politely wait our turn to talk.",
+                                "correct": true
+                            }
+                        ]
+                    },
+                    {
+                        "prompt": "Showing respect to others builds feelings of...",
+                        "options": [{
+                                "text": "disappointment and confusion.",
+                                "correct": false
+                            },
+                            {
+                                "text": "trust, safety, and wellbeing.",
+                                "correct": true
+                            },
+                            {
+                                "text": "pride, worry, and joy.",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    {
+                        "prompt": "Which of the following are acts of service that show respect?",
+                        "options": [{
+                                "text": "Talking about your favorite topic.",
+                                "correct": false
+                            },
+                            {
+                                "text": "Helping with chores at home.",
+                                "correct": true
+                            },
+                            {
+                                "text": "Donating your time for a community event.",
+                                "correct": true
+                            },
+                            {
+                                "text": "Talking behind someone's back.",
+                                "correct": false
+                            },
+                            {
+                                "text": "Helping a friend with their homework.",
+                                "correct": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
