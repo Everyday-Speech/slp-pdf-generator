@@ -172,22 +172,8 @@ Resources:
           BUCKET_NAME: !Ref PdfBucket
 
       Policies:            
-        - PolicyName: bucket-access
-          PolicyDocument:
-            Statement:
-              - Effect: Allow
-                Action:
-                  - s3:GetBucketLocation
-                  - s3:GetObject
-                  - s3:ListBucket
-                  - s3:ListBucketMultipartUploads
-                  - s3:PutObject
-                Resource:
-                  - !GetAtt PdfBucket.Arn
-                  - Fn::Join:
-                      - /
-                      - - Fn::GetAtt: [ PdfBucket, Arn ]
-                        - '*'
+        - S3CrudPolicy:
+            BucketName: !Ref PdfBucket
         # This policy allows the lambda to know the value of the New Relic licence key. We need this so
         # that we can send telemetry back to New Relic
         - AWSSecretsManagerGetSecretValuePolicy:
