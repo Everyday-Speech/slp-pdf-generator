@@ -209,7 +209,7 @@ Resources:
         Target: "es2020"
         Sourcemap: !If [IsProductionEnvironment, true, false]
         EntryPoints: 
-        - main.ts
+        - pdf-handler.ts
 
   # ==================================================================
   # S3 Bucket
