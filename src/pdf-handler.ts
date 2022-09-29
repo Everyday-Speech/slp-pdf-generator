@@ -11,8 +11,9 @@ import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
  */
 
 export const lambdaHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
+    console.log('This is a log from the lambda, it should show at New Relic');
     return {
         statusCode: 200,
-        body: "It is ok"
-    }
+        body: 'It is ok',
+    };
 };
