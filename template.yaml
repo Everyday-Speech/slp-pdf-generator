@@ -1,0 +1,244 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Admin BFF
+
+
+# =============================================================================================================================
+#
+#     ██████╗  █████╗ ██████╗  █████╗ ███╗   ███╗███████╗████████╗███████╗██████╗ ███████╗
+#     ██╔══██╗██╔══██╗██╔══██╗██╔══██╗████╗ ████║██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔════╝
+#     ██████╔╝███████║██████╔╝███████║██╔████╔██║█████╗     ██║   █████╗  ██████╔╝███████╗
+#     ██╔═══╝ ██╔══██║██╔══██╗██╔══██║██║╚██╔╝██║██╔══╝     ██║   ██╔══╝  ██╔══██╗╚════██║
+#     ██║     ██║  ██║██║  ██║██║  ██║██║ ╚═╝ ██║███████╗   ██║   ███████╗██║  ██║███████║
+#     ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝
+#
+# =============================================================================================================================
+
+
+
+# More on how to define parameters at SSM: https://medium.com/claranet-italia/a-practical-guide-to-surviving-aws-sam-d8ab141b3d25
+Parameters:
+  ServiceName: 
+    Type: String
+    Default: EverydaySpeech
+  Region:
+    Type: String
+    Default: us-east-1
+  Environment:
+    Type: String
+    Default: staging
+    AllowedValues:
+      - staging
+      - production
+      - development
+  NewRelicAccountId:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: New relic account id.
+    Default: NewRelicAccountId
+  NewRelicLayer:
+    Type: String
+    Default: NewRelicNodeJS16X:15
+
+
+
+# =============================================================================================================================
+#
+#     ███╗   ███╗ █████╗ ██████╗ ██████╗ ██╗███╗   ██╗ ██████╗ ███████╗
+#     ████╗ ████║██╔══██╗██╔══██╗██╔══██╗██║████╗  ██║██╔════╝ ██╔════╝
+#     ██╔████╔██║███████║██████╔╝██████╔╝██║██╔██╗ ██║██║  ███╗███████╗
+#     ██║╚██╔╝██║██╔══██║██╔═══╝ ██╔═══╝ ██║██║╚██╗██║██║   ██║╚════██║
+#     ██║ ╚═╝ ██║██║  ██║██║     ██║     ██║██║ ╚████║╚██████╔╝███████║
+#     ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝     ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝                                                               
+#
+# =============================================================================================================================
+
+
+
+# Mappings: 
+#   EnvironmentMap: 
+#     staging:
+#       UserServiceBaseUrl: https://staging-api-slp.everydayspeech.com
+#       UserSessionTokenPrivateKey: '{{resolve:secretsmanager:staging/userService:SecretString:SessionTokenPrivateKey}}'
+#     development:
+#       UserServiceBaseUrl: https://staging-api-slp.everydayspeech.com
+#       UserSessionTokenPrivateKey: '{{resolve:secretsmanager:staging/userService:SecretString:SessionTokenPrivateKey}}'
+#     production:
+#       UserServiceBaseUrl: https://api-slp.everydayspeech.com
+#       UserSessionTokenPrivateKey: '{{resolve:secretsmanager:prod/userService:SecretString:SessionTokenPrivateKey}}'
+
+
+
+# =============================================================================================================================
+#
+#      ██████╗ ██████╗ ███╗   ██╗██████╗ ██╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
+#     ██╔════╝██╔═══██╗████╗  ██║██╔══██╗██║╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+#     ██║     ██║   ██║██╔██╗ ██║██║  ██║██║   ██║   ██║██║   ██║██╔██╗ ██║███████╗
+#     ██║     ██║   ██║██║╚██╗██║██║  ██║██║   ██║   ██║██║   ██║██║╚██╗██║╚════██║
+#     ╚██████╗╚██████╔╝██║ ╚████║██████╔╝██║   ██║   ██║╚██████╔╝██║ ╚████║███████║
+#      ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═════╝ ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝                                                                            
+#
+# =============================================================================================================================
+
+
+
+Conditions : 
+  IsProductionEnvironment: 
+    Fn::Equals: [!Ref "Environment", production]
+  IsDevelopmentEnvironment: 
+    Fn::Equals: [!Ref "Environment", development]
+
+
+
+# =============================================================================================================================
+#
+#      ██████╗ ██╗      ██████╗ ██████╗  █████╗ ██╗     ███████╗
+#     ██╔════╝ ██║     ██╔═══██╗██╔══██╗██╔══██╗██║     ██╔════╝
+#     ██║  ███╗██║     ██║   ██║██████╔╝███████║██║     ███████╗
+#     ██║   ██║██║     ██║   ██║██╔══██╗██╔══██║██║     ╚════██║
+#     ╚██████╔╝███████╗╚██████╔╝██████╔╝██║  ██║███████╗███████║
+#      ╚═════╝ ╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝                                                         
+#
+# =============================================================================================================================
+
+
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 60
+    MemorySize: 4096
+    # The handler for your function needs to be the one provided by the instrumentation layer, below.
+    Handler: newrelic-lambda-wrapper.handler
+    Runtime: nodejs16.x
+    
+    Architectures:
+      - x86_64
+    
+    Layers:
+      - Fn::If:
+        - IsDevelopmentEnvironment
+        - !Ref AWS::NoValue
+        - !Sub arn:${AWS::Partition}:lambda:${AWS::Region}:451483290750:layer:${NewRelicLayer}
+    
+    Environment:
+      Variables:
+        # Distributed tracing needs your account ID, and your trusted account ID
+        NEW_RELIC_ACCOUNT_ID: !Ref NewRelicAccountId
+        # If your New Relic account has a parent account, this value should be that account ID. Otherwise, just
+        # your account id.
+        NEW_RELIC_TRUSTED_ACCOUNT_KEY: !Ref NewRelicAccountId
+        NEW_RELIC_EXTENSION_SEND_FUNCTION_LOGS: true
+
+
+
+Resources:
+
+
+  # ==================================================================
+  # API - Gateway
+  # Logic ID: Gateway
+  # Resource documentation:
+  # - https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-api.html
+  # ==================================================================
+  Api:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: !Sub PDF-Generator-${Environment}
+      StageName: !Ref Environment
+      Cors: "'*'"
+      
+  
+  # ==================================================================
+  # Lambda Function
+  # Logic ID: PdfFunction
+  # Resource documentation:
+  # - https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+  # ==================================================================
+  PdfFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      # For local envs we want to use the handler directly
+      # For cloud environemnts we want to use New Relic's wrapper for monitoring
+      # See below how we declare the right handler in NEW_RELIC_LAMBDA_HANDLER, the wrapper
+      # will use that to find the real file
+      Handler: !If [IsDevelopmentEnvironment, pdf-handler.lambdaHandler, newrelic-lambda-wrapper.handler]
+      
+      Environment:
+        Variables:
+          NEW_RELIC_LAMBDA_HANDLER: pdf-handler.lambdaHandler
+          USER_SERVICE_BASE_URL: !FindInMap [EnvironmentMap, !Ref "Environment", UserServiceBaseUrl]
+          USER_SESSION_TOKEN_PRIVATE_KEY : !FindInMap [EnvironmentMap, !Ref "Environment", UserSessionTokenPrivateKey]
+
+      Policies:            
+        - PolicyName: bucket-access
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetBucketLocation
+                  - s3:GetObject
+                  - s3:ListBucket
+                  - s3:ListBucketMultipartUploads
+                  - s3:PutObject
+                Resource:
+                  - !GetAtt PdfBucket.Arn
+                  - Fn::Join:
+                      - /
+                      - - Fn::GetAtt: [ PdfBucket, Arn ]
+                        - '*'
+        # This policy allows the lambda to know the value of the New Relic licence key. We need this so
+        # that we can send telemetry back to New Relic
+        - AWSSecretsManagerGetSecretValuePolicy:
+            SecretArn: !ImportValue NewRelicLicenseKeySecret-NewRelic-LicenseKeySecretARN
+
+      Events:
+        AdminListUsers:
+          Type: Api
+          Properties:
+            Path: /admin/users
+            Method: get
+            RestApiId: !Ref Api
+              
+
+    Metadata: # Manage esbuild properties
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: !If [IsProductionEnvironment, true, false]
+        Target: "es2020"
+        Sourcemap: !If [IsProductionEnvironment, true, false]
+        EntryPoints: 
+        - main.ts
+
+  # ==================================================================
+  # S3 Bucket
+  # Logic ID: PdfBucket
+  # Resource documentation:
+  # - https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples
+  # ==================================================================
+  PdfBucket:
+    Type: 'AWS::S3::Bucket'
+    DeletionPolicy: Retain
+  
+
+
+
+# ============================================================================================================================= 
+#
+#      ██████╗ ██╗   ██╗████████╗██████╗ ██╗   ██╗████████╗███████╗
+#     ██╔═══██╗██║   ██║╚══██╔══╝██╔══██╗██║   ██║╚══██╔══╝██╔════╝
+#     ██║   ██║██║   ██║   ██║   ██████╔╝██║   ██║   ██║   ███████╗
+#     ██║   ██║██║   ██║   ██║   ██╔═══╝ ██║   ██║   ██║   ╚════██║
+#     ╚██████╔╝╚██████╔╝   ██║   ██║     ╚██████╔╝   ██║   ███████║
+#      ╚═════╝  ╚═════╝    ╚═╝   ╚═╝      ╚═════╝    ╚═╝   ╚══════╝
+#                                                          
+# ============================================================================================================================= 
+
+
+
+# Note: Outputs are the way of exposing resources values from one Cloudformation stack to others
+Outputs:
+  PDFGeneratorApi:
+    Description: "PDF gateway URL"
+    Value: !Sub "https://${Api}.execute-api.${AWS::Region}.amazonaws.com/${Environment}"
