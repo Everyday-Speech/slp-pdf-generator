@@ -158,6 +158,7 @@ Resources:
   PdfFunction:
     Type: AWS::Serverless::Function
     Properties:
+      ReservedConcurrentExecutions: 5
       CodeUri: src/
       # For local envs we want to use the handler directly
       # For cloud environemnts we want to use New Relic's wrapper for monitoring
@@ -168,8 +169,7 @@ Resources:
       Environment:
         Variables:
           NEW_RELIC_LAMBDA_HANDLER: pdf-handler.lambdaHandler
-          USER_SERVICE_BASE_URL: !FindInMap [EnvironmentMap, !Ref "Environment", UserServiceBaseUrl]
-          USER_SESSION_TOKEN_PRIVATE_KEY : !FindInMap [EnvironmentMap, !Ref "Environment", UserSessionTokenPrivateKey]
+          BUCKET_NAME: !Ref PdfBucket
 
       Policies:            
         - PolicyName: bucket-access
@@ -218,7 +218,7 @@ Resources:
   # - https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples
   # ==================================================================
   PdfBucket:
-    Type: 'AWS::S3::Bucket'
+    Type: AWS::S3::Bucket
     DeletionPolicy: Retain
   
 
