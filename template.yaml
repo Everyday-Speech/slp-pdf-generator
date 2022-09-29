@@ -183,7 +183,7 @@ Resources:
         AdminListUsers:
           Type: Api
           Properties:
-            Path: /admin/users
+            Path: /test
             Method: get
             RestApiId: !Ref Api
               
